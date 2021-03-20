@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{9B19EC23-6A7A-401E-F6C5-4986EB8A74D9}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/AnimationStateController.cs">
+    <Files>
+      <File FileName="Assets/Scripts/CharacterController.cs" Line="22" Column="65" />
+      <File FileName="Assets/AnimationStateController.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="StoneGamePrototype" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="AnimationStateController.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="bf6f09b8-25c4-44b8-bb9c-32643dbea991" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

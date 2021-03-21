@@ -4,24 +4,54 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public CharacterController controller;
-    public float speed = 6f;
-    
-    // Start is called before the first frame update
-    
+    public float maxVelocity = 6f;
+    public float maxMovementForce = 6f;
+    Rigidbody rb;
+    public Vector3 movement;
+    Animator animator;
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
+    }
+
 
     // Update is called once per frame
     void Update()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-        Vector3 direction = new Vector3(horizontal, 0, vertical).normalized;
+        
+    }
 
-        if(direction.magnitude >= 0.1f)
+    void FixedUpdate()
+    {
+        if(rb.velocity.magnitude >= maxVelocity)
         {
-            controller.Move(direction * speed * Time.deltaTime);
+            return;
+        }
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            rb.AddForce(maxMovementForce * transform.forward);
+        }
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            rb.AddForce(maxMovementForce * -transform.forward);
+        }
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            rb.AddForce(maxMovementForce * transform.right);
+        }
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            rb.AddForce(maxMovementForce * -transform.right);
         }
     }
 
     
+
+
 }
